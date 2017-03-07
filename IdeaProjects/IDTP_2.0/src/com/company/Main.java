@@ -5,6 +5,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Login myLogin = new Login();
+        //Login myLogin = new Login();
+        Candidate newCandidate = new Candidate();
     }
 }

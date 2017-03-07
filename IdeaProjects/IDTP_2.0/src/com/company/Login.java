@@ -23,9 +23,6 @@ public class Login {
         setEmail();
         setPassword();
 
-        //email;
-        //password;
-
         WebDriver driver = new HtmlUnitDriver();
         driver.get(loginURL.toString());
         WebElement emailInput = driver.findElement(By.name("ctl00$ContentBody$Login1$PwdPassword"));
