@@ -23,8 +23,8 @@ public class Login {
         setEmail();
         setPassword();
 
-        //email = "chris.scites@practicelink.com";
-        //password ="Inca#5cat";
+        //email;
+        //password;
 
         WebDriver driver = new HtmlUnitDriver();
         driver.get(loginURL.toString());
