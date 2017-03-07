@@ -1,6 +1,10 @@
 package com.company;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import java.io.IOException;
 import java.net.*;
 import java.util.Scanner;
@@ -18,12 +22,22 @@ public class Login {
     public Login() throws IOException {
         setEmail();
         setPassword();
-        URLConnection myURLConnection = loginURL.openConnection();
-        myURLConnection.connect();
 
+        //email = "chris.scites@practicelink.com";
+        //password ="Inca#5cat";
 
-
-
+        WebDriver driver = new HtmlUnitDriver();
+        driver.get(loginURL.toString());
+        WebElement emailInput = driver.findElement(By.name("ctl00$ContentBody$Login1$PwdPassword"));
+        WebElement pwInput = driver.findElement(By.name("ctl00$ContentBody$Login1$PwdPassword"));
+        WebElement submitButton = driver.findElement(By.name("ctl00$ContentBody$Login1$BtnLogIn"));
+        WebElement stayLoggedIn = driver.findElement(By.name("ctl00$ContentBody$Login1$CbRememberMe"));
+        emailInput.sendKeys(email);
+        pwInput.sendKeys(password);
+        stayLoggedIn.isSelected();
+        submitButton.click();
+        System.out.println("Page title is: " + driver.getTitle());
+        driver.quit();
 
     }
 
