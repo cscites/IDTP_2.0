@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="examples">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/IdeaProjects/IDTP_2.0/lib/httpcomponents-asyncclient-4.1.3-bin/httpcomponents-asyncclient-4.1.3/examples" />
+      <root url="file://$PROJECT_DIR$/IdeaProjects/IDTP_2.0/lib/httpcomponents-client-4.5.3-bin/httpcomponents-client-4.5.3/examples" />
+      <root url="file://$PROJECT_DIR$/IdeaProjects/IDTP_2.0/lib/httpcomponents-core-4.4.6-osgi-bin/httpcomponents-core-4.4.6/examples" />
+    </SOURCES>
+  </library>
+</component>
