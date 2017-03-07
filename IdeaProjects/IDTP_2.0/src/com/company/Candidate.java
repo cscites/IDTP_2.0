@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -16,7 +18,8 @@ public class Candidate {
     private String webCV;
     Scanner scanner = new Scanner(System.in);
 
-    public Candidate() throws MalformedURLException {
+    public Candidate() throws IOException, URISyntaxException {
+        //Login2 login2 = new Login2();
         setWebCV();
         URL candidateURL = new URL("https://admin.practicelink.com/Content/Candidate/ContactInfoDetail.aspx?" +
                 "candidateId="+webCV);
