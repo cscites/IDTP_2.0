@@ -47,8 +47,7 @@ public class Login2 {
     public Login2() throws IOException, URISyntaxException {
         //setEmail();
         //setPassword();
-        email = "chris.scites@practicelink.com";
-        password = "Inca#5cat";
+
         HttpURLConnection login2 = new HttpURLConnection(loginURL) {
             @Override
             public void disconnect() {
