@@ -1,9 +1,13 @@
 package com.company;
 
+import com.gargoylesoftware.htmlunit.WebClient;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class Main {
+    public static WebClient pLink = new WebClient();
+
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         //Login myLogin = new Login();
