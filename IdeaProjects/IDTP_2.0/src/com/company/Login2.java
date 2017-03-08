@@ -3,6 +3,7 @@ package com.company;
 
 
 
+import com.gargoylesoftware.htmlunit.WebClient;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -39,6 +40,7 @@ import java.util.*;
 public class Login2 {
     private String email;
     private String password;
+
 
     URL loginURL = new URL("https://admin.practicelink.com/MyAccount/Login.aspx?urlPath=https://admin.practicelink.com/default.aspx");
     Scanner scanner = new Scanner(System.in);
