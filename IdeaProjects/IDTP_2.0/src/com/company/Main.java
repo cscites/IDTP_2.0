@@ -1,28 +1,29 @@
 package com.company;
 
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.gargoylesoftware.htmlunit.html.*;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-
         Browser browser = new Browser();
-        System.out.println("Enter a URL");
-        browser.setUrl(scanner.nextLine());
+        String url = "https://www.google.com";
+        HtmlPage page = browser.page(url);
+        System.out.println(page.asText());
+
+        HtmlElement search = page.getElementByName("q");
+        search.setAttribute("value", "Cats");
+        HtmlElement go = page.getElementByName("btnK");
+        go.click();
+        HtmlPage page1 = browser.currentPage();
+        System.out.println(page1.asText());
 
 
-        HtmlPage page = browser.getPage();
-
-        String asText = page.asText();
 
 
-        System.out.println(asText);
+
 
 
 

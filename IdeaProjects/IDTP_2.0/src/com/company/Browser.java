@@ -9,24 +9,20 @@ import java.io.IOException;
  * Created by chris on 3/8/17.
  */
 public class Browser {
-    private String url;
     private final WebClient BROWSER;
 
-
     public Browser(){
-
         BROWSER = new WebClient();
     }
 
-    public void setUrl(String url){
-        this.url = url;
-    }
 
-    public HtmlPage getPage() throws IOException {
+    public HtmlPage page(String url) throws IOException {
         return BROWSER.getPage(url);
-
     }
 
 
+    public HtmlPage currentPage() throws IOException {
+        return page(BROWSER.getCurrentWindow().getEnclosedPage().getUrl().toString());
+    }
 
 }
